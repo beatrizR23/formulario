@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/basicform.css">
+</head>
+<body>
+    <button id="openForm" onclick="openForm()">Quiero registrarme</button>
+    <form id="formBox" action="" method="get">
+        
+        <fieldset>
+    
+            <legend>Crea tu usuario y contraseña</legend>
+
+            <span onclick="closeForm()" class="close" title="Close Modal">X</span>
+
+            <label for="username">Usuario: </label>
+            <input type="text" id="username" name="username" required oninput="validUname()">
+            
+            <label for="pword">Contraseña: </label>
+            <input type="password" class="test" id="pword" name="pword" required disabled oninput="validPword()">
+            
+            <label for="rpword">Confirme Contraseña: </label>
+            <input type="password" class="test" id="rpword" name="rpword" requiered disabled oninput="confirmPword()">
+
+            <label>
+                <input type="checkbox" name="remember"> Recordar usuario
+            </label>
+
+            <button id="nextStep" onclick="nextStep()" disabled>Registrarse</button>
+        </fieldset>
+   </form>
+   <script src="/js/basic_validation.js"></script>
+</body>
+</html>

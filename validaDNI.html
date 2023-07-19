@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        input[type="submit"]:disabled{
+            color: #c4c4c4;
+        }
+    </style>
+    <script>
+        function validaDNI(){
+            var dni = document.getElementById("dni").value;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="validaDNI()">
+        <label for="dni">DNI:</label>
+        <input id="dni" name="dni" required>
+        <input type="submit" value="Continue" disabled="disabled">
+    </form>
+</body>
+</html>
